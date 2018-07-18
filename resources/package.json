@@ -1,0 +1,23 @@
+{
+  "name": "gulp",
+  "version": "0.1.0",
+  "author": "SFP",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.17.3",
+    "critical": "^0.7.3",
+    "foundation-sites": "^6.4.4-rc1"
+  },
+  "dependencies": {
+    "gulp": "*",
+    "gulp-load-plugins": "*",
+    "gulp-concat": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "gulp-sass": "*",
+    "gulp-cssnano": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-htmlmin": "*",
+    "jquery": "*"
+  }
+}

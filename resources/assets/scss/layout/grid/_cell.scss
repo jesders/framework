@@ -1,0 +1,159 @@
+
+.cell {
+	@include createCells();
+}
+
+
+
+
+// //Encapsulate variables in their own file
+// $__grid--columns: 12;
+// $__grid--breakpoints: (
+// 	small:0,
+// 	medium:667px,
+// 	large:1024px,
+// 	xlarge:1200px
+// );
+// $__grid--gutters: (
+// 	small:30px,
+// 	medium:30px,
+// 	large:30px
+// );
+// $__grid--containers: (
+// 	small:1200px,
+// 	medium:1400px,
+// 	large:1600px,
+// 	full:100%
+// );
+// //TEST CODE
+// @mixin breakpoint($value, $operator:'max-width', $query:'screen') {
+// 	@media #{$query} and (#{$operator}: #{$value}) {
+// 		@content;
+// 	}
+// }
+
+// // @mixin breakpoint($breakpoint: md, $key: min, $orientation: screen) {
+// //   @if ($orientation) {
+// // 	  @media #{$orientation} and (#{$key}-width: map-get($breakpoints, $breakpoint)) {
+// //       @content;
+// //     }
+// //   } @else {
+// //     @media (#{$key}-width: map-get($breakpoints, $breakpoint)) {
+// //       @content;
+// //     }
+// //   }
+// // }
+
+
+// // @mixin respond-to($breakpoint, $, $orientation:'screen') { 
+// //     @if map-has-key($breakpoints, $breakpoint) {
+// //         @media (max-width: #{map-get($breakpoints, $breakpoint)}) { @content; }
+// //     }
+// //     @else {
+// //         @warn "No value exists for this breakpoint."
+// //             + "Please make sure it is defined in $breakpoints map.";
+// //     }
+// // }
+
+
+// // @mixin breakpoint($args) {
+// // 	@each $arg in $args {
+// // 		.icon-#{$arg} {
+// // 			background-image: url('/images/#{$arg}.jpg');
+// // 		}
+// // 	}
+// // 	@content;	
+// // }
+
+// // @mixin breakpoint($media:'screen', $orientation:'max-width', $breakpoint) {
+// // 	@if map-has-key($breakpoints, $breakpoint) {
+// // 		@media #{$media} and (#{$orientation}:#{ map-get( $breakpoints, $breakpoint )}) { @content; }
+// //     }
+// //     @else {
+// //         @warn "No value exists for this breakpoint."
+// //             + "Please make sure it is defined in $breakpoints map.";
+// //     }
+// // }
+
+
+// //GENERATE ALL BREAKPOINTS
+// @mixin generate-breakpoint($__grid--breakpoint-value, $operator: 'max-width', $query: 'screen') {
+// 	@if($__grid--breakpoint-value == 0) {
+// 		@content;
+// 	} 
+// 	@else {
+// 		@media #{$query} and (#{$operator}: #{$__grid--breakpoint-value} ) {
+// 			@content;
+// 		}
+// 	}
+// }
+// //GENERATE CELLS FOR ROWS
+// @mixin generate-row-cells($__grid--breakpoint-key, $__grid--breakpoint-value, $__grid--columns) {
+// 	@include generate-breakpoint($__grid--breakpoint-value) {
+// 		@for $i from 1 through $__grid--columns {
+// 			&.#{$__grid--breakpoint-key}-#{$i} {
+// 				width: ( (100% / $__grid--columns) * $i);
+// 			}
+// 		}
+// 	}
+// }
+// //GENERATE CELLS FOR COLUMNS
+// @mixin generate-column-cells($__grid--breakpoint-key, $__grid--breakpoint-value, $__grid--columns) {
+// 	@include generate-breakpoint($__grid--breakpoint-value) {
+// 		@for $i from 1 through $__grid--columns {
+// 			&.#{$__grid--breakpoint-key}-#{$i} {
+// 				height: ( (100% / $__grid--columns) * $i);
+// 			}
+// 		}
+// 	}
+// }
+
+// .row,
+// .column {
+// 	display: flex;
+// 	flex-wrap: wrap;
+	
+// 	@each $__grid--container-key, $__grid--container-value in $__grid--containers {
+// 		&-#{$__grid--container-key} {
+// 			max-width:#{$__grid--container-value};
+// 		}
+// 	}
+// }
+
+// .cell {
+// 	flex-basis: auto;
+// 	flex-grow: 0;
+// 	flex-shrink: 0;
+// 	box-sizing: border-box;
+// 	@include breakpoint(667px) {
+// 		background-color:green !important;
+// 	}
+// }
+
+// .row {
+// 	flex-direction: row;
+
+// 	> .cell {
+// 		width: 100%;
+// 		height: auto;
+// 		font-size: rem(30px);
+		
+// 		@each $__grid--breakpoint-key, $__grid--breakpoint-value in $__grid--breakpoints {
+// 			@include generate-row-cells($__grid--breakpoint-key, $__grid--breakpoint-value, $__grid--columns);
+// 		}
+// 	}
+// }
+
+// .column {
+// 	flex-direction: column;
+
+// 	> .cell {
+// 		font-size: rem(50px);
+// 		width: auto;
+// 		height: 100%;
+		
+// 		@each $__grid--breakpoint-key, $__grid--breakpoint-value in $__grid--breakpoints {
+// 			@include generate-column-cells($__grid--breakpoint-key, $__grid--breakpoint-value, $__grid--columns);
+// 		}
+// 	}
+// }

@@ -1,0 +1,33 @@
+// ==============================
+// Base Styles - Eleement selectors only
+// ==============================
+html {
+	font-size:16px;
+}
+
+body {
+
+}
+
+header {
+
+}
+
+h1 {
+
+}
+
+//Will Go Away!!!!!!!!!!!
+.row {
+	> .cell {
+		padding:rem(20px);
+	}
+}
+
+.column {
+	> .cell {
+		padding:rem(45px);
+	}
+}
+
+//etc......

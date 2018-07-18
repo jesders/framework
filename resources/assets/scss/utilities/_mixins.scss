@@ -1,0 +1,49 @@
+/*
+|--------------------------------------------------------------------------
+| Utilities / Mixins
+|--------------------------------------------------------------------------
+|
+| This file should never change. These are strict SMACSS Standards. For
+| more information, please visit https://smacss.com/.
+|
+|
+*/
+
+
+/* Imports - Importing variables for mixin use
+---------------------------------------------------------------------------- */
+@import "utilities/config";
+
+
+/* Subitem
+---------------------------------------------------------------------------- */
+@mixin createCells() {
+	@include generate-breakpoint($__grid--breakpoint-value) {
+		@for $i from 1 through $__grid--columns {
+			&.#{$__grid--breakpoint-key}-#{$i} {
+				width:( ( 100% / $__grid--columns ) * $i );
+			}
+		}
+	}
+}
+
+
+/* Subitem
+---------------------------------------------------------------------------- */
+// @mixin createCells() {
+
+// }
+
+
+/* Subitem
+---------------------------------------------------------------------------- */
+@mixin createBreakpoints($__grid--breakpoint-value, $operation:'max-width', $device:'screen') {
+	@if($__grid--breakpoint-value == 0) {
+		@content;
+	} 
+	@else {
+		@media #{$device} and (#{$operation}: #{$__grid--breakpoint-value} ) {
+			@content;
+		}
+	}
+}
