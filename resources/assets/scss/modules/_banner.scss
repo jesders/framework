@@ -1,0 +1,57 @@
+.banner {
+	@extend %__background-image--default;
+
+	h1,
+	p {
+		// color:$white;
+		// text-shadow:3px 3px 6px rgba($black, .50);
+	}
+
+	h1 {
+		// font-family:$__font-family--secondary;
+		font-size:72px;
+		margin-bottom:15px;
+		margin-top:0;
+	}
+	p {
+		font-size:18px;
+		line-height:1.75;
+		margin-top:0;
+		margin-bottom:30px;
+
+	}
+
+	.button {
+		// color:$white;
+		// border-color:$white !important;
+	}
+	.shift {
+		position:absolute;
+		top:50%;
+		right:0;
+		left:0;
+		transform:translate3d(0, -50%, 0);
+		max-width:1400px;
+		margin:auto;
+		align-items:space-between;
+		display:flex;
+		flex-direction:column;
+	}
+	.copy {
+		margin:0 auto 90px auto;
+		max-width:65%;
+	}
+
+	&.full {
+		height:100vh;
+	}
+	&.large {
+		height:70vh;
+	}
+	&.medium {
+		height:50vh;
+	}
+	&.small {
+		height:25vh;
+	}
+}

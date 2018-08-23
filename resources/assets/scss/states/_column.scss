@@ -36,11 +36,16 @@
 */
 
 
-/* Imports
+/* States
 ---------------------------------------------------------------------------- */
-@import 'header';
-@import 'footer';
-@import 'homepage';
-@import 'content';
-@import 'copyright';
-@import 'grid';
+.column {
+	&.has-gutter {
+		margin-top:-60px;
+		margin-bottom:-60px;
+
+		.cell {
+			margin-top:60px;
+			margin-bottom:60px;
+		}
+	}
+}

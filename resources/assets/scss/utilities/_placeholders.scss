@@ -1,0 +1,12 @@
+%__background-image--default {
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+%__flex--default {
+	display:flex;
+	> * {
+		flex-grow:1;
+	}
+}

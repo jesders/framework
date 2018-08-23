@@ -1,0 +1,52 @@
+header {
+	background-color:rgba(0,0,0,.5);
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	z-index:9999;
+
+	p,
+	a {
+		font-size:20px;
+		// color:$white;
+		padding:15px;
+		margin:0;
+	}
+
+	svg {
+		width:25px;
+		height:25px;
+	}
+
+	.cta {
+
+		a {
+			padding:0;
+			
+		}
+	}
+
+	a {
+		// display:block;
+		padding:15px;
+
+		svg {
+			// fill:$white;
+			width:25px;
+			height:25px;
+			margin-right:10px;
+		}
+		&.cart {
+			// color:$white;
+			// background-color:$__color--primary;
+			justify-content:center;
+			padding:15px;
+		}
+	}
+}
+
+.logo {
+	width:265px;
+
+}

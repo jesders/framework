@@ -1,0 +1,14 @@
+.button {
+	font-size:$__var--button-font-size;
+	padding:$__var--button-padding;
+	width:map-get($__map--button-widths, default);
+	background-color:$__color--primary;
+	text-align:center;
+	display:block;
+
+	svg {
+		// fill:$white;
+		width:15px;
+		height:15px;
+	}
+}

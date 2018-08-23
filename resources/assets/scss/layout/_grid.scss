@@ -1,10 +1,60 @@
-// ==========================================================================
-// Layout / Grid
-// ==========================================================================
-@import "layout/grid/index";
+.row,
+.column {
+	display:flex;
+}
 
-//Same of @supports feature query
-//
-// @supports (display: grid) {
-// 	@import 'layout/grid/xy';
+.row {
+	flex-direction:row;
+	flex-wrap:wrap;
+
+	.cell {
+		width:100%;
+
+		@each $key, $value in $__map--grid-breakpoints {
+    		@include makeGridCells($key, $value, $__var--grid-columns);
+  		}
+
+		&.shrink {
+			width:auto;
+		}
+	}
+}
+
+.column {
+	flex-direction:column;
+	flex-wrap:nowrap;
+
+	.cell {
+		height:100%;
+
+		&.shrink {
+			height:auto;
+		}
+	}
+}
+
+.cell {
+	flex-grow:0;
+	flex-shrink:0;
+	flex-basis:auto;
+}
+
+
+
+
+
+
+
+
+// .row {
+
+// 	&.gutter {
+// 		margin-left:-60px;
+// 		margin-right:-60px;
+
+// 		.cell {
+// 			margin-left:60px;
+// 			margin-right:60px;
+// 		}
+// 	}
 // }

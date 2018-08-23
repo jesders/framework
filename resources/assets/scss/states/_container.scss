@@ -36,11 +36,26 @@
 */
 
 
-/* Imports
+/* States
 ---------------------------------------------------------------------------- */
-@import 'header';
-@import 'footer';
-@import 'homepage';
-@import 'content';
-@import 'copyright';
-@import 'grid';
+.container {
+	//Associate centering with row state
+	max-width:1200px;
+	margin:auto;
+
+	&.is-small {
+		max-width:1200px;
+	}
+	&.is-default {
+		max-width:1200px;
+	}
+	&.is-medium {
+		max-width:1400px;
+	}
+	&.is-large {
+		max-width:1600px;
+	}
+	&.is-full {
+		max-width:100%;
+	}
+}

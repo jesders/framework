@@ -1,5 +1,4 @@
-//Calculate REM Values
-@function rem($size) {
-	$remSize:$size / $__font-size--base;
-	@return #{$remSize}rem;
+@function rem($size: 16px) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
 }

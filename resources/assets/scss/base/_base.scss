@@ -1,33 +1,52 @@
-// ==============================
-// Base Styles - Eleement selectors only
-// ==============================
-html {
-	font-size:16px;
+* {
+	box-sizing:border-box;
 }
 
+html,
 body {
-
+	// font-family:$__font-family--primary;
+	font-size:18px;
+	// color:$__color--secondary;
 }
 
-header {
+section {
+	padding-top:60px;
+	padding-bottom:60px;
+	padding-left:20px;
+	padding-right:20px;
+}
 
+a {
+	// color:$__color--primary;
+}
+
+p {
+	line-height:1.75;
+	margin-bottom:20px;
 }
 
 h1 {
-
+	// font-family:$__font-family--secondary;
+	font-size:56px;
+	margin-bottom:20px;
+	// line-height:1;
 }
 
-//Will Go Away!!!!!!!!!!!
-.row {
-	> .cell {
-		padding:rem(20px);
-	}
+h2 {
+	// font-family:$__font-family--primary;
+	font-size:42px;
+	margin-bottom:20px;
 }
 
-.column {
-	> .cell {
-		padding:rem(45px);
-	}
+h3 {
+	// font-family:$__font-family--primary;
+	font-size:34px;
+	// font-weight:$__font-weight--bold;
+	margin-bottom:20px;
 }
 
-//etc......
+h4 {
+	// font-family:$__font-family--primary;
+	font-size:24px;
+	// font-weight:$__font-weight--semibold;
+}

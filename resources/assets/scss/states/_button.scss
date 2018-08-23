@@ -1,0 +1,24 @@
+.button {
+	&.is {
+		@include makeButtonClasses;
+
+		&-transparent {
+
+		}
+	}
+	&.is-transparent {
+		// border:2px solid $__color--primary;
+	}
+	// &.is-small {
+	// 	width:150px;
+	// }
+	// &.is-medium {
+	// 	width:200px;
+	// }
+	// &.is-large {
+	// 	width:250px;
+	// }
+	// &.is-xlarge {
+	// 	width:300px;
+	// }
+}

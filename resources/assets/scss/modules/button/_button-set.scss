@@ -1,0 +1,14 @@
+.button-set {
+	display:flex;
+	margin-top:0;
+
+	.button {
+		margin-left:20px;
+
+		&:first-child {
+			margin-left:0;
+		}
+
+		width:200px;
+	}
+}
