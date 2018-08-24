@@ -1,0 +1,27 @@
+$__var--button-font-size: rem(18px);
+$__var--button-padding: rem(15px);
+$__var--button-margin:  0;
+
+$__map-button-props: (
+	font-size: rem(18px),
+	padding: (
+		top:rem(20px),
+		right:auto,
+		bottom:20px,
+		left:auto
+	),
+	margin: (
+		top:0,
+		right:0,
+		bottom:0,
+		left:0,
+	)
+);
+
+$__map--button-widths: (
+	default:150px,
+	small:100px,
+	medium:200px,
+	large:250px,
+	xlarge:300px
+);

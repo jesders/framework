@@ -14,12 +14,34 @@
 	}	
 }
 
+// @mixin makeGridCells($key, $value, $__var--grid-columns) {
+// 	@include makeBreakpoints($value) {
+// 		@for $i from 1 through $__var--grid-columns {
+// 			&.#{$key}-#{$i}{
+// 				$base: ((100 / ($__var--grid-columns / $i)) * 1%);
+// 				width:#{$base};
+// 			}
+// 		}
+// 	}
+// }
+
 @mixin makeGridCells($key, $value, $__var--grid-columns) {
 	@include makeBreakpoints($value) {
 		@for $i from 1 through $__var--grid-columns {
 			&.#{$key}-#{$i}{
 				$base: ((100 / ($__var--grid-columns / $i)) * 1%);
-				width:#{$base};
+
+				@if(map-has-key($__map--grid-gutters, $key)) {
+					$gutter: map-get($__map--grid-gutters, $key);
+					width:calc(#{$base} - #{$gutter});
+					margin-left:($gutter / 2);
+					margin-right:($gutter / 2);
+				}
+
+				@else {
+					width:#{$base};
+					
+				}
 			}
 		}
 	}

@@ -1,0 +1,35 @@
+//Variable Declarations
+$__var--grid-columns:12;
+
+
+//Maps
+$__map--grid-containers: (
+	'small':    1200px,
+	'medium':   1400px,
+	'large':    1600px,
+	'full':     100%
+);
+
+$__map--grid-breakpoints: (
+	xxxsmall:   375px,
+	xxsmall:    480px,
+	xsmall:     667px,
+	small:      768px,
+	medium:     960px,
+	large:      1024px,
+	xlarge:     1200px,
+	xxlarge:    1400px,
+	xxxlarge:   1600px
+);
+
+$__map--grid-gutters: (
+	xxxsmall:   60px,
+	xxsmall:    60px,
+	xsmall:     60px,
+	small:      60px,
+	medium:     60px,
+	large:      60px,
+	xlarge:     60px,
+	xxlarge:    60px,
+	xxxlarge:   20px
+);

@@ -14,7 +14,7 @@ let mix = require('laravel-mix');
 mix.fastSass('resources/assets/scss/app.scss', 'public_html/assets/css')
    .js('resources/assets/js/app.js', 'public_html/assets/js')
    .browserSync({
-       proxy: 'localhost:8090',
+       proxy: 'localhost:8099',
        files: [
            'app/**/*',
            'public_html/**/*',

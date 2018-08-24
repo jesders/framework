@@ -1,0 +1,46 @@
+/*
+|--------------------------------------------------------------------------
+| Application
+|--------------------------------------------------------------------------
+|
+| This file should never change. These are strict SMACSS Standards. For
+| more information, please visit https://smacss.com/.
+| 
+| Note: EVERYTHING NEEDS COMMENTED. We should be using the following structure
+|       for all code:
+|
+|       .classname {
+|	    	@includes
+|           @extends
+|            selector styles
+|            psuedo classes
+|            psuedo elements   ( &::before / &::after )
+|            nested selectors  ( > h3 )
+|            nested classnames ( > .child )
+|       }
+|
+| Note: Great way to organize your CSS below:
+|        
+|       -Text
+|       -Color
+|       -Display and Box Model
+|       -Positioning
+|       -Other
+|
+| You should not be nesting more than 4 levels deep. If deeper than 4 levels, consider
+| restructing HTML.
+|
+| Never include vendor prefixes ( -webkit, -moz, -os, -ms ). Autoprefixer will handle.
+|
+|
+*/
+
+
+/* Imports
+---------------------------------------------------------------------------- */
+@import 'base';
+@import 'section';
+@import 'container';
+@import 'row';
+@import 'column';
+@import 'cell';

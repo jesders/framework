@@ -1,0 +1,28 @@
+@import url("https://use.typekit.net/uqx3twe.css");
+
+@font-face {
+    font-family: 'lhf';
+    src: url('/assets/fonts/lhfbetterbiltregular-webfont.eot');
+    src: url('/assets/fonts/lhfbetterbiltregular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/lhfbetterbiltregular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/lhfbetterbiltregular-webfont.woff') format('woff'),
+         url('/assets/fonts/lhfbetterbiltregular-webfont.ttf') format('truetype'),
+         url('/assets/fonts/lhfbetterbiltregular-webfont.svg#lhf_betterbilt_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Families
+$__font-family--primary:   'lato';
+$__font-family--secondary: 'lhr';
+
+//Font Weights
+$__font-weight--xthin:      100;
+$__font-weight--thin:       200;
+$__font-weight--light:      300;
+$__font-weight--regular:    400;
+$__font-weight--medium:     500;
+$__font-weight--semibold:   600;
+$__font-weight--bold:       700;
+$__font-weight--xbold:      800;
+$__font-weight--xxbold:     900;
