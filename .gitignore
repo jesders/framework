@@ -1,4 +1,4 @@
 .vagrant
-resources/node_modules
-Vagrantfile
+node_modules
 .DS_Store
+
